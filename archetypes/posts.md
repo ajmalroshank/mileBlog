@@ -10,7 +10,7 @@ categories = [
     "Development",
     "golang",
 ]
-image = "/img/about-bg.jpg" #optional image - "/img/about-bg.jpg" is the default
+image = "/images/uploads/about-bg.jpg" #optional image - "/images/uploads/about-bg.jpg" is the default
 description = ""
 draft = true
 comments = true
