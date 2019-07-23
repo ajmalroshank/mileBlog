@@ -19,7 +19,7 @@ You can use the site as is, it will work. You can for example use it with [HugoB
 If you want to have all the features and pages of the original theme, you will need a similar *config.toml*:
 
 ``` toml
-baseurl = "http://humboldtux.github.io"
+baseurl = "http://humboldtux.github.io/"
 title = "Start Bootstrap Clean Blog"
 canonifyurls = true
 paginate = 10
