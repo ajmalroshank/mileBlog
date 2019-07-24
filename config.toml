@@ -12,13 +12,12 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "/"
+baseURL = "https://romantic-wright-e94bea.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "The ragasirtahk Blog"
+title = "Mile Auto Blog"
 theme = "startbootstrap-clean-blog"
-disqusShortname = "the-ragasirtahk-blog"
-googleAnalytics = "UA-96539727-5"
+googleAnalytics = "XX-XXXXXXXX-X"
 paginate = 7
 canonifyurls = true
 
@@ -31,19 +30,7 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Sagar Khatri"
-  bio = "Open Source Enthusiast | Blogger | Quizzer | Conversationalist"
-  job = "Student @ DPS Sonepat"
-  location = "India"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "khatri.sagar.sk@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  # picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-  # Your Twitter username without the @. E.g : thibaudlepretre
-  twitter = "ragasirtahk"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
+  name = "Mile Auto"
 
 # Menu Configuration
 [[menu.main]]
@@ -76,19 +63,7 @@ canonifyurls = true
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
-[[menu.main]]
-  weight = 6
-  identifier = "portfolio"
-  name = "Portfolio"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-address-card\"></i>"
-  url = "https://me.ragasirtahk.tk/"
 
-[[menu.links]]
-  weight = 1
-  identifier = "github"
-  name = "GitHub"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/ragasirtahk"
 [[menu.links]]
   weight = 2
   identifier = "facebook"
