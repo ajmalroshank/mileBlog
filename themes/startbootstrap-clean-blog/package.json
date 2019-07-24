@@ -1,5 +1,5 @@
 {
-  "name": "hugo-tranquilpeak-theme",
+  "name": "startbootstrap-clean-blog",
   "version": "0.4.3-BETA",
   "description": "A gorgeous responsive theme for Hugo blog framework",
   "main": "Gruntfile.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kakawait/hugo-tranquilpeak-theme.git"
+    "url": "https://github.com/IronSummitMedia/startbootstrap-clean-blog.git"
   },
   "keywords": [
     "hugo",
@@ -23,9 +23,9 @@
   "author": "Thibaud Leprêtre <thibaud.lepretre@gmail.com> (https://kakawait.com)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/kakawait/hugo-tranquilpeak-theme/issues"
+    "url": "http://startbootstrap.com/template-overviews/clean-blog/issues"
   },
-  "homepage": "https://github.com/kakawait/hugo-tranquilpeak-theme",
+  "homepage": "http://startbootstrap.com/template-overviews/clean-blog/",
   "devDependencies": {
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.5.0",

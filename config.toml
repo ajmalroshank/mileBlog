@@ -12,11 +12,11 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://www.ragasirtahk.tk/"
+baseURL = "http://humboldtux.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "The ragasirtahk Blog"
-theme = "hugo-tranquilpeak-theme"
+theme = "startbootstrap-clean-blog"
 disqusShortname = "the-ragasirtahk-blog"
 paginate = 7
 canonifyurls = true
