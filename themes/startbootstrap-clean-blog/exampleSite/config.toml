@@ -1,4 +1,4 @@
-baseURL = "https://themes.gohugo.io//theme/startbootstrap-clean-blog/"
+baseurl = "http://humboldtux.github.io/sbcb-demo"
 title = "Start Bootstrap Clean Blog"
 canonifyurls = true
 paginate = 10

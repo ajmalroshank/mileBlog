@@ -1,154 +1,105 @@
-# Tranquilpeak
+# Warning
 
-A gorgeous responsive theme for Hugo blog framework.
+**This theme has been transferred from [humboldtux](https://github.com/humboldtux/), its former owner and initiator, to me. I have various plans for this theme, which I'll carry forward in the near future.**
 
-![Tranquilpeak](https://raw.githubusercontent.com/kakawait/hugo-tranquilpeak-theme/master/showcase.png)
+## About
 
-## Alpha/Beta versions
+Hugo theme based on [Start Bootstrap Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/).
 
-**ATTENTION** during *alpha* or *beta* [versions](https://github.com/kakawait/hugo-tranquilpeak-theme/milestones) breaking changes are possible on config file.
+![Screenshot](https://raw.githubusercontent.com/humboldtux/startbootstrap-clean-blog/master/images/tn.png)
 
-You can track [breaking changes label](https://github.com/kakawait/hugo-tranquilpeak-theme/issues?q=is%3Aissue+is%3Aopen+label%3A%22breaking+changes%22).
+## Setup
 
-How can I migrate my current version? Please read [CHANGELOG.md](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/CHANGELOG.md).
+### As is
 
-## Credits
+You can use the site as is, it will work. You can for example use it with [HugoBasicExample](https://github.com/spf13/HugoBasicExample).
 
-*Hugo* version of Tranquilpeak is a based on original *Hexo* version https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak. This version is simply a port to *Hugo* static site generator.
+#### full features
 
-Please all the credit should be attributed to [original *Hexo* version](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak) and its author [Louis Barranqueiro](https://github.com/LouisBarranqueiro).
+If you want to have all the features and pages of the original theme, you will need a similar *config.toml*:
 
-*Hugo* version keeps every `.js` and `.css` files untouched from original *Hexo* version in order to enjoy futur original *Hexo* version updates or features! 
+``` toml
+baseurl = "http://humboldtux.github.io/sbcb-demo"
+title = "Start Bootstrap Clean Blog"
+canonifyurls = true
+paginate = 10
+theme = "startbootstrap-clean-blog"
+languageCode = "en-us"
+copyright = "Code released under the Apache 2.0 license."
+googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
+disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus comments
 
-## Summary
+[author]
+  name = "Benoît Benedetti"
 
-- [General](#general)
-- [Features](#features)
-- [Quick start](#quick-start)
-- [Demo](#demo)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Showcase](#showcase)
-- [License](#license)
-
-## General
-
-- **Authors**: [Louis Barranqueiro (LouisBarranqueiro)](https://github.com/LouisBarranqueiro) and [Thibaud Leprêtre (kakawait)](https://github.com/kakawait)
-- **Version**: 0.4.3-BETA (based on Hexo version 1.10.0)
-- **Compatibility**: Hugo v0.20.1
-
-## Features
-
-**General features:**  
-
-- Fully responsive
-- Optimized for tablets & mobiles
-- Configurable menu of the sidebar
-- Pages to filter tags, categories and archives
-- Background cover image
-- Beautiful about page
-- Support Open Graph protocol
-- Easily customizable (fonts, colors, layout elements, code coloration, etc..)
-- Support internationalization (i18)
+[params]
+  DateForm = "Mon, Jan 2, 2006"
+  Description = "Your site description"
+  Author = "Benoît Benedetti"
+  email = "benoit.benedetti@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
+  postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
+  showReadTime = true #set to false to exclude read time from header of post
+  # This will load all the CSS defined in the list
+  customCSS = ["<absolute path to CSS>", "/static/css/test.css", "<or just load it off the internet>"]
   
-**Posts features:**  
+[[params.social]]
+  title = "twitter"
+  url = "https://twitter.com/humboldtux"
+[[params.social]]
+  title = "github"
+  url = "https://github.com/humboldtux"
+[[params.social]]
+  title = "facebook"
+  url = "https://www.facebook.com/FACEBOOKHANDLE"
 
-- Thumbnail image
-- Cover image
-- Responsive videos & images
-- Sharing options
-- Navigation menu
-- GitHub theme for code highlighting (customizable)
-- Image gallery
-- Tags for images (FancyBox), wide images, tabbed code blocks, highlighted text, alerts
-- Table of contents  
-  
-**Integrated services:**  
-
-- Disqus
-- Google analytics
-- Gravatar
-- Facebook Insights
-
-### Missing features from original *Hexo* version
-
-- [ ] Baidu analytics
-- [ ] Algolia (https://github.com/kakawait/hugo-tranquilpeak-theme/issues/8)
-- [ ] Pagination customization `tagPagination`, `categoryPagination` and `archivePagination` (https://github.com/kakawait/hugo-tranquilpeak-theme/issues/17)
-
-**ATTENTION** following features will not be possible due to *Hugo* limitations
-
-- Archives pages by years `/archives/2015`
-- Archives pages by month `/archives/2015/01`
-
-## Quick start
-
-**Please read [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md), it's short and useful to discover all features and possibilities of the theme, especially the  [writing posts](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#writing-posts) section**
-
-### For people who want to use the original version of Tranquilpeak without modifications (users)
-
-Go to the directory where you have your Hugo site and run:
-
-```shell
-mkdir themes
-cd themes
-git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = -200
+[[menu.main]]
+  name = "Archives"
+  url = "/posts/"
+  weight = -180
 ```
 
-After installing the Tranquilpeak theme successfully, we recommend you to take a look at the [exampleSite](exampleSite) directory. You will find a working Hugo site configured with the Universal theme that you can use as a starting point for your site.
+The footer contains link icons to any enabled social media sites, such as facebook or linkedin. There is also an email icon, by removing the 'email' parameter or commenting out the icon will be removed.
 
-First, let's take a look at the [config.toml](exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
-
-More information on [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) to install and configure the theme  
-
-### For people who want to create their own version of tranquilpeak (developers) 
-
-1. Run `git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git`  
-2. Follow [developer documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/developer.md) to edit and build the theme 
-
-## Demo
-
-Check out Tranquilpeak theme in live : [hugo-tranquilpeak-theme demo](https://tranquilpeak.kakawait.com)
-
-## Showcase
-
-Checkout showcase https://github.com/kakawait/hugo-tranquilpeak-theme/wiki/Showcase
-
-### How can I add my site to the showcase
-  
-**Click [here](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/new?title=Add%20my%20blog%20into%20the%20showcase&body=Hey,%20add%20my%20blog%20into%20the%20showcase:) to add your blog into the showcase.**
-
-Please fill the following information:
-
-1. public url
-2. name (optional)
-3. description (optional)
-
-## Documentation
-
-If it's your first time using Hugo, please check [Hugo official documentation](https://gohugo.io/overview/introduction/)
-
-### For users  
-
-To install and configure the theme, consult the following documentation : [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md)  
-
-### For developers
-
-To understand the code, the workflow and edit the theme, consult the following documentation : [developer documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/developer.md)
+You can have a look at the source on the [repo site](https://github.com/humboldtux/sbcb-demo) for configuration parameters.
 
 ## Contributing
 
-All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
+Contributions are more than welcome. If you want to contribute and need inspiration, have a look at the following *TODO* section.
+If you have a particular new feature or improvement in mind, before submitting a PR, please open an issue first.
 
-Read [guidelines for contributing](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/.github/CONTRIBUTING.md) for more information.
+## TODO
 
-As explained on [Credits](#credits):
-
-> *Hugo* version keeps every `.js` and `.css` files untouched from original *Hexo* version in order to enjoy futur original *Hexo* version updates or features! 
-
-That mean I would keep a strong dependency with original *Hexo* theme. Thus if you want to suggest any modifications on `.css` or `.js` files **I will submit those changes to original *Hexo* theme** (except if it's really specific to *Hugo* bugs that is not present on *Hexo*).
-
-## License
-
-hugo-tranquilpeak-theme is released under the terms of the [GNU General Public License v3.0](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE).
-
+* multi-language support:
+  * encoding
+  * https://github.com/spf13/hugo/tree/master/examples/multilingual
+  * http://discuss.gohugo.io/t/multiple-language-websites/537
+  * http://discuss.gohugo.io/t/hugo-multisite-workflow/103
+* "Edit on github" feature http://discuss.gohugo.io/t/how-to-implement-edit-this-page-on-github/1166
+* Make author name clickable, to link to page of all posts by author
+* Display archive posts per year/month
+* dynamic configuration of email for JS contact form
+* Advanced pagination, make pagination button look like older posts button
+* pre and next links in post https://github.com/antzucaro/az.com/blob/master/layouts/_default/single.html
+* Suggested links at the bottom of post
+* use post title as post image name
+* mailing list subscription form
+* Google search form
+ * http://discuss.gohugo.io/t/how-are-you-implementing-site-search/986
+* multi author support, authors list page, author page
+* use {{ .Content }} for 404.html
+* deploy workflow
+  * Makefile
+  * http://discuss.gohugo.io/t/deployment-workflow/90
+  * http://discuss.gohugo.io/t/my-deployment-process/807
+  * http://discuss.gohugo.io/t/automated-hugo-deployments-anywhere-using-wercker/539
+* updatedate post metadata for updated post
+* comment system support: ~~disqus~~, Discourse, Kaiju
+* Syntax highlighting
+* Less support
+* post series : http://discuss.gohugo.io/t/creating-post-series/1115
+* Add menu entry for taxonomies
+* DRY template
